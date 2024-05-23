@@ -49,30 +49,22 @@ h1 {
     animation: none;
 }
 
-.ball::before {
-    content: '';
-    position: absolute;
+.inner-circle {
     width: 80px;
     height: 80px;
     background-color: white;
     border-radius: 50%;
-}
-
-.answer {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.answer {
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
-    background-color: transparent;
 }
 
 button {
