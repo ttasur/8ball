@@ -1,37 +1,100 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    max-width: 400px;
-    margin: 50px auto;
     text-align: center;
 }
 
-.ball {
+h1 {
+    margin-bottom: 20px;
+}
+
+.question-box {
+    margin-bottom: 20px;
+}
+
+#questionInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.ball-container {
+    position: relative;
     width: 200px;
     height: 200px;
-    position: relative;
-    cursor: pointer;
+    margin: 0 auto;
 }
 
-.ball img {
+.ball {
     width: 100%;
     height: 100%;
+    background-color: #000;
     border-radius: 50%;
-    background-color: #3498db; /* Fallback color if image fails to load */
-    object-fit: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: none;
+    animation-fill-mode: forwards;
 }
 
-.ball p {
+.ball::before {
+    content: '';
     position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.answer {
+    position: absolute;
+    width: 60px;
+    height: 60px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 14px;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    user-select: none; /* Prevent text selection */
+    text-align: center;
+    background-color: transparent;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
 }
