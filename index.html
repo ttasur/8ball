@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask the Ball</title>
+    <title>Ask the 8 Ball</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ask the Ball</h1>
-        <p>Think of a yes/no question and click the ball for an answer:</p>
-        <div class="ball" onclick="getAnswer()">
-            <img src="ball.png" alt="Magic Ball">
-            <p id="answer">Click the ball</p>
+        <h1>Ask the 8 Ball</h1>
+        <div class="question-box">
+            <input type="text" id="questionInput" placeholder="Type your question here...">
         </div>
+        <div class="ball-container">
+            <div class="ball" id="ball">
+                <div class="answer" id="answer">?</div>
+            </div>
+        </div>
+        <button onclick="shakeBall()">Shake Ball</button>
     </div>
     <script src="script.js"></script>
 </body>
